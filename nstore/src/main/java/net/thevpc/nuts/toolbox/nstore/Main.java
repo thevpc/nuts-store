@@ -1,6 +1,5 @@
 package net.thevpc.nuts.toolbox.nstore;
 
-
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,24 +7,28 @@ import javafx.stage.Stage;
 import net.thevpc.nuts.*;
 
 import java.io.IOException;
+import net.thevpc.nuts.util.NMsg;
 
 /**
  * JavaFX App
  */
-public class Main extends Application implements NutsApplication {
+public class Main extends Application implements NApplication {
+
     private static String[] appArgs;
 
     public void init() throws Exception {
-        NSession ac=NutsApplications.createApplicationContext(this,appArgs,null);
-        NutsApplications.runApplication(this,ac);
-        NSession session=ac.getSession();
-        switch (ac.getMode()){
+        net.thevpc.nuts.NExceptionWithExitCodeBase a;
+        NApplications.runApplication(new NMainArgs()
+                .setApplicationInstance(this)
+                .setNutsArgs(new String[]{"--share"})
+                .setArgs(appArgs)
+        );
+        switch (NApp.of().getMode()) {
             case INSTALL:
             case UNINSTALL:
             case UPDATE:
-            case AUTO_COMPLETE:
-            {
-                throw new NutsExecutionException(session,NMsg.ofC("exit"),0);
+            case AUTO_COMPLETE: {
+                throw new NExecutionException(NMsg.ofC("exit"), 0);
             }
         }
     }
@@ -45,12 +48,12 @@ public class Main extends Application implements NutsApplication {
     }
 
     public static void main(String[] args) {
-        appArgs=args;
+        appArgs = args;
         launch();
     }
 
     @Override
-    public void run(NSession session) {
+    public void run() {
 
     }
 }

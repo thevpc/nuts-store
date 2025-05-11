@@ -64,7 +64,9 @@
         </license>
     </licenses>
     <dependencies>
-        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts</artifactId><version>0.8.5</version></dependency>
+        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-lib</artifactId><version>0.8.5.0</version></dependency>
+        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-runtime</artifactId><version>0.8.5.0</version></dependency>
+        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-boot</artifactId><version>0.8.5</version></dependency>
         <dependency><groupId>com.miglayout</groupId><artifactId>miglayout-javafx</artifactId><version>11.0</version></dependency>
         <dependency><groupId>org.kordamp.ikonli</groupId><artifactId>ikonli-javafx</artifactId><version>12.3.0</version></dependency>
         <dependency><groupId>org.kordamp.ikonli</groupId><artifactId>ikonli-typicons-pack</artifactId><version>12.3.0</version></dependency>
