@@ -17,7 +17,6 @@ public class Main extends Application implements NApplication {
     private static String[] appArgs;
 
     public void init() throws Exception {
-        net.thevpc.nuts.NExceptionWithExitCodeBase a;
         NApplications.runApplication(new NMainArgs()
                 .setApplicationInstance(this)
                 .setNutsArgs(new String[]{"--share"})
