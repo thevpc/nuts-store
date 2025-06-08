@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.thevpc.nuts.toolbox</groupId>
     <artifactId>nstore</artifactId>
@@ -58,23 +60,68 @@
 
     <licenses>
         <license>
-            <name>GNU LESSER GENERAL PUBLIC LICENSE Version </name>
-<url>https://www.gnu.org/licenses/lgpl-3.0.en.html</url>
+            <name>GNU LESSER GENERAL PUBLIC LICENSE Version</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.en.html</url>
 
         </license>
     </licenses>
     <dependencies>
-        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-lib</artifactId><version>0.8.5.0</version></dependency>
-        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-runtime</artifactId><version>0.8.5.0</version></dependency>
-        <dependency><groupId>net.thevpc.nuts</groupId><artifactId>nuts-boot</artifactId><version>0.8.5</version></dependency>
-        <dependency><groupId>com.miglayout</groupId><artifactId>miglayout-javafx</artifactId><version>11.0</version></dependency>
-        <dependency><groupId>org.kordamp.ikonli</groupId><artifactId>ikonli-javafx</artifactId><version>12.3.0</version></dependency>
-        <dependency><groupId>org.kordamp.ikonli</groupId><artifactId>ikonli-typicons-pack</artifactId><version>12.3.0</version></dependency>
-        <dependency><groupId>org.kordamp.ikonli</groupId><artifactId>ikonli-fontawesome-pack</artifactId><version>12.3.0</version></dependency>
-        <dependency><groupId>com.jfoenix</groupId><artifactId>jfoenix</artifactId><version>9.0.10</version></dependency>
-        <dependency><groupId>org.openjfx</groupId><artifactId>javafx-controls</artifactId><version>17.0.2</version></dependency>
-        <dependency><groupId>org.openjfx</groupId><artifactId>javafx-fxml</artifactId><version>17.0.2</version></dependency>
-        <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter-api</artifactId><version>5.8.2</version><scope>test</scope></dependency>
+        <dependency>
+            <groupId>net.thevpc.nuts</groupId>
+            <artifactId>nuts-lib</artifactId>
+            <version>0.8.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.thevpc.nuts</groupId>
+            <artifactId>nuts-runtime</artifactId>
+            <version>0.8.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.thevpc.nuts</groupId>
+            <artifactId>nuts-boot</artifactId>
+            <version>0.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-javafx</artifactId>
+            <version>11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-javafx</artifactId>
+            <version>12.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-typicons-pack</artifactId>
+            <version>12.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-fontawesome-pack</artifactId>
+            <version>12.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
     <distributionManagement>
@@ -92,7 +139,7 @@
                 <configuration>
                     <mainClass>net.thevpc.nuts.toolbox.nstore.Main</mainClass>
                 </configuration>
-            </plugin>            
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -109,7 +156,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.14.0</version>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -132,6 +179,26 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                     <compilerArgument>-Xlint:unchecked</compilerArgument>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>toolchain</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <toolchains>
+                        <jdk>
+                            <version>17</version>
+                            <vendor>openjdk</vendor>
+                        </jdk>
+                    </toolchains>
                 </configuration>
             </plugin>
         </plugins>
