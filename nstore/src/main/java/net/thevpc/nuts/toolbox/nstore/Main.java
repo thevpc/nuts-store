@@ -12,16 +12,16 @@ import net.thevpc.nuts.util.NMsg;
 /**
  * JavaFX App
  */
-public class Main extends Application implements NApplication {
+@NApp.Info
+public class Main extends Application {
 
     private static String[] appArgs;
 
     public void init() throws Exception {
-        NApplications.runApplication(new NMainArgs()
-                .setApplicationInstance(this)
-                .setNutsArgs(new String[]{"--share"})
-                .setArgs(appArgs)
-        );
+        NApp.builder().instance(this)
+                        .setNutsArgs("--share")
+                                .args(appArgs)
+                .run();
         switch (NApp.of().getMode()) {
             case INSTALL:
             case UNINSTALL:
@@ -38,7 +38,7 @@ public class Main extends Application implements NApplication {
         try {
             root = javafx.fxml.FXMLLoader.load(getClass().getResource("main.fxml"));
             Scene scene = new Scene(root, 800, 600);
-            stage.setTitle("Nuts Store - 0.8.3.1");
+            stage.setTitle("Nuts Store - 0.8.6.0");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -51,7 +51,7 @@ public class Main extends Application implements NApplication {
         launch();
     }
 
-    @Override
+    @NApp.Main
     public void run() {
 
     }
