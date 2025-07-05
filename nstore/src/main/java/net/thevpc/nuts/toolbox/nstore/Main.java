@@ -51,7 +51,7 @@ public class Main extends Application {
         launch();
     }
 
-    @NApp.Main
+    @NApp.Runner
     public void run() {
 
     }
