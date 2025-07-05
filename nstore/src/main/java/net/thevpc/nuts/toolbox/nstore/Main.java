@@ -12,7 +12,7 @@ import net.thevpc.nuts.util.NMsg;
 /**
  * JavaFX App
  */
-@NApp.Definition
+@NAppDefinition
 public class Main extends Application {
 
     private static String[] appArgs;
@@ -51,7 +51,7 @@ public class Main extends Application {
         launch();
     }
 
-    @NApp.Runner
+    @NAppRunner
     public void run() {
 
     }
