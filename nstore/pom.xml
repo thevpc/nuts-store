@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.thevpc.nuts.toolbox</groupId>
     <artifactId>nstore</artifactId>
-    <version>0.8.6.0</version>
+    <version>0.8.7.0</version>
     <packaging>jar</packaging>
     <name>Nuts Community Store</name>
     <url>https://github.com/thevpc/nuts</url>
@@ -69,17 +69,17 @@
         <dependency>
             <groupId>net.thevpc.nuts</groupId>
             <artifactId>nuts-lib</artifactId>
-            <version>0.8.6.0</version>
+            <version>0.8.7.0</version>
         </dependency>
         <dependency>
             <groupId>net.thevpc.nuts</groupId>
             <artifactId>nuts-runtime</artifactId>
-            <version>0.8.6.0</version>
+            <version>0.8.7.0</version>
         </dependency>
         <dependency>
             <groupId>net.thevpc.nuts</groupId>
             <artifactId>nuts-boot</artifactId>
-            <version>0.8.6</version>
+            <version>0.8.7</version>
         </dependency>
         <dependency>
             <groupId>com.miglayout</groupId>
