@@ -38,7 +38,7 @@ public class Main extends Application {
         try {
             root = javafx.fxml.FXMLLoader.load(getClass().getResource("main.fxml"));
             Scene scene = new Scene(root, 800, 600);
-            stage.setTitle("Nuts Store - 0.8.6.0");
+            stage.setTitle("Nuts Store - 0.8.7.0");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
