@@ -4,9 +4,13 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import net.thevpc.nuts.*;
 
 import java.io.IOException;
+
+import net.thevpc.nuts.app.NApp;
+import net.thevpc.nuts.app.NAppDefinition;
+import net.thevpc.nuts.app.NAppRunner;
+import net.thevpc.nuts.command.NExecutionException;
 import net.thevpc.nuts.util.NMsg;
 
 /**
