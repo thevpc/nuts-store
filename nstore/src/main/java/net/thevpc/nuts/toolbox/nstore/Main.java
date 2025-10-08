@@ -11,7 +11,7 @@ import net.thevpc.nuts.app.NApp;
 import net.thevpc.nuts.app.NAppDefinition;
 import net.thevpc.nuts.app.NAppRunner;
 import net.thevpc.nuts.command.NExecutionException;
-import net.thevpc.nuts.util.NMsg;
+import net.thevpc.nuts.text.NMsg;
 
 /**
  * JavaFX App
