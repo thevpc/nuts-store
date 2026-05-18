@@ -24,10 +24,10 @@ public class Main extends Application {
 
     public void init() throws Exception {
         NApp.builder().instance(this)
-                        .setNutsArgs("--share")
+                        .nutsArgs("--share")
                                 .args(appArgs)
                 .run();
-        switch (NApp.of().getMode()) {
+        switch (NApp.of().mode()) {
             case INSTALL:
             case UNINSTALL:
             case UPDATE:
