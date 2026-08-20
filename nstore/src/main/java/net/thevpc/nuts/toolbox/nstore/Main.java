@@ -31,7 +31,7 @@ public class Main extends Application {
             case INSTALL:
             case UNINSTALL:
             case UPDATE:
-            case AUTO_COMPLETE: {
+            case COMPLETE: {
                 throw new NExecutionException(NMsg.ofC("exit"), 0);
             }
         }
