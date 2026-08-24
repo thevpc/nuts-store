@@ -8,26 +8,26 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import net.thevpc.nuts.Nuts;
+import net.thevpc.nuts.app.NApplication;
 import net.thevpc.nuts.app.NApp;
-import net.thevpc.nuts.app.NAppDefinition;
-import net.thevpc.nuts.app.NAppRunner;
+import net.thevpc.nuts.app.NAppRun;
 import net.thevpc.nuts.command.NExecutionException;
 import net.thevpc.nuts.text.NMsg;
 
 /**
  * JavaFX App
  */
-@NAppDefinition
+@NApp
 public class Main extends Application {
 
     private static String[] appArgs;
 
     public void init() throws Exception {
-        NApp.builder().instance(this)
+        NApplication.builder().instance(this)
                         .nutsArgs("--share")
                                 .args(appArgs)
                 .run();
-        switch (NApp.of().mode()) {
+        switch (NApplication.of().mode()) {
             case INSTALL:
             case UNINSTALL:
             case UPDATE:
@@ -56,7 +56,7 @@ public class Main extends Application {
         launch();
     }
 
-    @NAppRunner
+    @NAppRun
     public void run() {
 
     }
