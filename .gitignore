@@ -2,3 +2,6 @@
 /nstore/.mvn/wrapper/maven-wrapper.properties
 /nstore/.mvn/wrapper/MavenWrapperDownloader.java
 nstore/target/
+
+# Maven build output
+target/
